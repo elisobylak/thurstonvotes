@@ -1,0 +1,27 @@
+<head>
+  <title>Thurston Votes Example App</title>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Thurston County Votes</h1>
+			<h2>Location list</h2>
+		</header>
+		<div class="map-container">
+    		{{> googleMap name="exampleMap" options=exampleMapOptions}}
+ 		</div>
+
+ 		<h1>Olympia Area</h1>
+		<ul>
+			{{#each locations}}
+				{{> location}}
+			{{/each}}
+		</ul>
+	</div>
+</body>
+
+<template name="location">
+ <li>{{text}}</li>
+</template>
+
