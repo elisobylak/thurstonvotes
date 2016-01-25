@@ -11,6 +11,7 @@ if (Meteor.isClient) {
   });
 }
  
+
 if (Meteor.isClient) {
   Meteor.startup(function() {
     GoogleMaps.load();
@@ -22,6 +23,7 @@ if (Meteor.isClient) {
       if (GoogleMaps.loaded()) {
         // Map initialization options
         return {
+          //center: navigator.geolocation.getCurrentPosition(function(position)),
           center: new google.maps.LatLng(47.2136, -122.1631),
           zoom: 8
         };
@@ -33,8 +35,22 @@ if (Meteor.isClient) {
     // We can use the `ready` callback to interact with the map API once the map is ready.
     GoogleMaps.ready('exampleMap', function(map) {
       // Add a marker to the map once it's ready
+      if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+        }
+      else{
+    showError("Your browser doesn't support geolocation!");
+        }
+
+      // Now get user's location
+
+    function locationSuccess(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      }
+      var userLatLng = new google.maps.LatLng(lat, lon);
       var marker = new google.maps.Marker({
-        position: map.options.center,
+        position: userLatLng,
         map: map.instance
       });
       //var auditorOffice = {lat: 47.02932, lng: -122.9122}
