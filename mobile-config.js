@@ -2,7 +2,7 @@ App.info({
 	id: 'com.example.eli.s',
 	name: 'Thurston Votes',
 	description: 'Example application for Thurston Votes',
-	author: 'Eli S.',
+	author: 'Eli S. Brieanna B.',
 	email: 'contact@example.com',
 	website: 'http://example.com'
 });
