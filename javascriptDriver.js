@@ -9,8 +9,11 @@ if (Meteor.isClient) {
       { text: "Thurston County Courthouse - 2000 Lakeridge Drive SW"}
     ]
   });
-}
- 
+} 
+
+Router.map(function () {
+  this.route('Contact_us');
+});
 
 if (Meteor.isClient) {
   Meteor.startup(function() {
@@ -20,22 +23,25 @@ if (Meteor.isClient) {
   Template.body.helpers({
     exampleMapOptions: function() {
       // Make sure the maps API has loaded
-      if (GoogleMaps.loaded()) {
+      var latLng = Geolocation.latLng();
+      if (GoogleMaps.loaded() && latLng) {
         // Map initialization options
         return {
-          //center: navigator.geolocation.getCurrentPosition(function(position)),
-          center: new google.maps.LatLng(47.2136, -122.1631),
-          zoom: 8
+          //center: new google.maps.LatLng(47.2136, -122.1631),
+          center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          zoom: 14
         };
       }
+      console.log("Map is ready and showing");
     }
   });
 
+  /*
   Template.body.onCreated(function() {
     // We can use the `ready` callback to interact with the map API once the map is ready.
     GoogleMaps.ready('exampleMap', function(map) {
       // Add a marker to the map once it's ready
-      if (navigator.geolocation) {
+       if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
         }
       else{
@@ -43,7 +49,6 @@ if (Meteor.isClient) {
         }
 
       // Now get user's location
-
     function locationSuccess(position) {
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
@@ -51,9 +56,8 @@ if (Meteor.isClient) {
       var userLatLng = new google.maps.LatLng(lat, lon);
       var marker = new google.maps.Marker({
         position: userLatLng,
-        map: map.instance
-      });
-      //var auditorOffice = {lat: 47.02932, lng: -122.9122}
+        map: map.instance 
     });
   });
+  */
 }

@@ -41,8 +41,8 @@ header {
   
   /*Step 2: Basic Button Styles*/
   display: block;
-  height: 30px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
   position: right;
   background: #34696f;
   border: 2px solid rgba(33, 68, 72, 0.59);
@@ -59,10 +59,10 @@ header {
   background: -ms-linear-gradient(top, #d9d9d9, #f6e6d5);
   background: linear-gradient(top, #d9d9d9, #f6e6d5);
   
-  -webkit-border-radius: 50px;
-  -khtml-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   
   -webkit-box-shadow: 0 8px 0 #1b383b;
   -moz-box-shadow: 0 8px 0 #1b383b;
