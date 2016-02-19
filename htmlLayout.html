@@ -3,10 +3,9 @@
 </head>
 
 <body>
-
 	<div class="container">
 		<nav>
-			<a href="/Contact_us" class="button">Contact Us</a>
+			<a href="http://www.co.thurston.wa.us/auditor/Elections/history/archive.htm" class="button">Contact Us</a>
 		</nav>
 
 		<br>
@@ -20,16 +19,94 @@
  		</div> 
 
 
+ 		<h1>Lacey Area</h1>
+ 		<ul>
+ 			{{#each lacey}}
+ 				{{> Lacey_Area}}
+ 			{{/each}}
+ 		</ul>
+
  		<h1>Olympia Area</h1>
 		<ul>
-			{{#each locations}}
-				{{> location}}
+			{{#each olympia}}
+				{{> Olympia_Area}}
 			{{/each}}
 		</ul>
+
+ 		<h1>Tumwater Area</h1>
+		<ul>
+			{{#each tumwater}}
+				{{> Tumwater_Area}}
+			{{/each}}
+		</ul>
+
+		<h1>North County</h1>
+		<ul>
+			{{#each northCounty}}
+				{{> North_County}}
+			{{/each}}
+		</ul>
+
+		<h1>South County</h1>
+		<ul>
+			{{#each southCounty}}
+				{{> South_County}}
+			{{/each}}
+		</ul>
+
+		<h1>Southeast County</h1>
+		<ul>
+			{{#each southeastCounty}}
+				{{> Southeast_County}}
+			{{/each}}
+		</ul>
+
+		<h1>Southwest County</h1>
+		<ul>
+			{{#each southwestCounty}}
+				{{> Southwest_County}}
+			{{/each}}
+		</ul>
+
+		<h1>Steamboat Island</h1>
+		<ul>
+			{{#each steamboat}}
+				{{> Steamboat_Island}}
+			{{/each}}
+		</ul>
+
 	</div>
 </body>
 
-<template name="location">
+<template name="Lacey_Area">
+	<li>{{text}}</li>
+</template>
+
+<template name="Olympia_Area">
  <li>{{text}}</li>
+</template>
+
+<template name="Tumwater_Area">
+	<li>{{text}}</li>
+</template>
+
+<template name="North_County">
+	<li>{{text}}</li>
+</template>
+
+<template name="South_County">
+	<li>{{text}}</li>
+</template>
+
+<template name="Southeast_County">
+	<li>{{text}}</li>
+</template>
+
+<template name="Southwest_County">
+	<li>{{text}}</li>
+</template>
+
+<template name="Steamboat_Island">
+	<li>{{text}}</li>
 </template>
 
