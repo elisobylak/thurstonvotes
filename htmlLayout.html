@@ -2,12 +2,35 @@
   <title>Thurston Votes Example App</title>
 </head>
 
-<body>
-	<div class="container">
-		<nav>
-			<a href="http://www.co.thurston.wa.us/auditor/Elections/history/archive.htm" class="button">Contact Us</a>
-			<a href="/Home" class="button">Home</a>
-		</nav>
+
+<template name="firstPage">
+<div class ="container">
+	<h1>Thurston County</h1>
+	<h1>Voter's App</h1>
+<div class="row">
+	<a href="/second" class="button col-xs-1"> Map page</a>
+	<a href="/third" class="button col-xs-1"> 3rd page</a>
+	<a href="/fourth" class="button col-xs-1"> 4th page</a>
+</div>
+<br>
+<div class="row">
+	<a href="/fifth" class="button col-xs-1"> 5th page</a>
+	<a href="http://www.co.thurston.wa.us/electiondatalookup/default.aspx" class="button col-xs-1">My District and Elected Officials</a>
+	<a href="http://www.co.thurston.wa.us/auditor/Forms/Hours&Contact.htm" class="button col-xs-1">Contact Us</a>
+</div>
+<br>
+<div class="row">
+	<a href="http://www.co.thurston.wa.us/auditor/Elections/precinct_maps/maps.htm" class="button col-xs-1">District and Precinct Maps</a>
+	<a href="https://wei.sos.wa.gov/agency/osos/en/voters/Pages/register_to_vote.aspx" class="button col-xs-1">Register to Vote</a>
+	<a href="http://www.co.thurston.wa.us/auditor/Elections/election_dates.htm" class="button col-xs-1">Election Dates</a>
+</div>
+</div>
+</template>
+
+<template name="secondPage">
+	<h1>This is the Map page</h1>
+	
+	<a href="/" class="button">Home page</a>
 
 		<br>
 		<header>
@@ -18,7 +41,6 @@
 		<div class="map-container">
     		{{> googleMap name="exampleMap" options=exampleMapOptions}}
  		</div> 
-
 
  		<h1>Lacey Area</h1>
  		<ul>
@@ -76,11 +98,7 @@
 			{{/each}}
 		</ul>
 
-	</div>
-</body>
 
-<template name="Home">
-	<p>Welcome to the Thurston Votes App</p>
 </template>
 
 <template name="Lacey_Area">
@@ -113,5 +131,29 @@
 
 <template name="Steamboat_Island">
 	<li>{{text}}</li>
+</template>
+
+<template name="mainNav">
+     <nav class="navbar navbar-inverse " role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    Toggle
+                </button>
+                <a class="navbar-brand" href="#">Quick Jump</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home Page</a>
+                        <a href="/second">Map Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+       {{> yield }}
+    </div>
 </template>
 

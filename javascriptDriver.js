@@ -1,5 +1,41 @@
+if (Meteor.isClient) {
+  Meteor.startup(function() {
+    GoogleMaps.load();
+  });
+
+  Router.configure({
+    // the default layout
+    layoutTemplate: 'mainNav'
+  });
+
+  Router.route('/', function() {
+    this.render('firstPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/second', function() {
+    this.render('secondPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/third', function() {
+    this.render('thirdPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/fourth', function() {
+    this.render('fourthPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/fifth', function() {
+    this.render('fifthPage');
+    this.layout('mainNav');
+  });
+
+
 if (Meteor.isClient) { 
-  Template.body.helpers({
+  Template.secondPage.helpers({
     olympia: [
       { text: "Church of the Good Shepherd - 1601 North Street SE"},
       { text: "Gloria Dei Lutheran Church - 1515 Harrison Ave NW"},
@@ -10,7 +46,7 @@ if (Meteor.isClient) {
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
     lacey: [
       { text: "Fire District 3, Station 34 - 8407 Steilacoom Road SE"},
       { text: "Fire District 3, Station 35 - 3701 Willamette Drive NE"},
@@ -21,7 +57,7 @@ if (Meteor.isClient) {
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       tumwater: [
         { text: "Black Lake - Fire 5, Station 1 - 5911 Black Lake Boulevard SW, Olympia"},
         { text: "Tumwater Timberland Library - 7023 New Market St SW"},
@@ -29,21 +65,21 @@ if (Meteor.isClient) {
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       northCounty: [
         { text: "South Bay - Fire 8, Station 81 - 3506 Shincke Road NE, Olympia"},
         { text: "South Bay - Fire 8, Station 83 - 5046 Boston Harbor Rd NE, Olympia"}
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       southCounty: [
         { text: "Bucoda - 103 S Main St (across the street from the Liberty Market)"},
         { text: "Tenino School District Administration - 301 Old Highway 99 N"}
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       southeastCounty: [
         { text: "Lackamas Elementary - 16240 Bald Hill Road SE, Yelm"},
         { text: "Rainier City Hall - 102 Rochester Street W"},
@@ -51,7 +87,7 @@ if (Meteor.isClient) {
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       southwestCounty: [
         { text: "Grand Mound Center - 19949 Old Highway 99 SW, Rochester"},
         { text: "Littlerock - Fire 11 - 10828 Littlerock Road SW"},
@@ -59,28 +95,19 @@ if (Meteor.isClient) {
     ]
   });
 
-  Template.body.helpers({
+  Template.secondPage.helpers({
       steamboat: [
         { text: "Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia"}
     ]
   });
 } 
-
-Router.route('/', function() {
-  this.render('Home')
-});
-
-if (Meteor.isClient) {
-  Meteor.startup(function() {
-    GoogleMaps.load();
-  });
   
 var latLng;
 
 var locations = [
   //Olympia Area
-  ["Church of the Good Shepherd - 1601 North Street SE", 47.015693, -122.880327],
-  ["Gloria Dei Lutheran Church - 1515 Harrison Ave NW", 47.045438, -122.920795],
+  ["Church of the Good Shepherd - 1601 North Street SE", 47.015693, -122.880327, "https://www.google.com/maps/@47.015503,-122.8809649,17z"],
+  ["Gloria Dei Lutheran Church - 1515 Harrison Ave NW", 47.045438, -122.920795, "https://www.google.com/maps/@47.0455534,-122.921139,17z"],
   ["Crain's Office Supply - 1006 4th Ave E", 47.045903, -122.889725],
   ["Haggen NW Fresh - 1313 Cooper Point Rd SW", 47.034041, -122.941126],
   ["The Evergreen State College - 2700 McCann Plaza Dr NW", 47.070621, -122.975550],
@@ -121,22 +148,24 @@ var locations = [
   ["Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia", 47.085221, -123.015991]
 ];
 
-Template.body.onCreated(function() {
+Template.secondPage.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready("exampleMap", function(map) {
     // Add a marker to the map once it's ready
     latLng = Geolocation.latLng();
     var userPos = new google.maps.Marker({
       position: latLng,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+      icon: 'https://www.google.com/help/hc/images/maps_street_view.png',
       animation: google.maps.Animation.DROP,
       map: map.instance
     });
+    
     var infowindow = new google.maps.InfoWindow();
     var markers, i;
     for(i = 0; i < locations.length; i++) {
       markers = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        url: locations[i][3],
         map: map.instance
       });
       google.maps.event.addListener(markers, 'click', (function(markers, i) {
@@ -149,7 +178,7 @@ Template.body.onCreated(function() {
   });
 });
 
-Template.body.helpers({
+Template.secondPage.helpers({
   exampleMapOptions: function() {
     // Make sure the maps API has loaded
     latLng = Geolocation.latLng();
@@ -160,6 +189,7 @@ Template.body.helpers({
         //center: new google.maps.LatLng(47.2136, -122.1631),
         center: new google.maps.LatLng(latLng.lat, latLng.lng),
         scrollwheel: false,
+        draggable: false,
         zoom: 14
       };
     }
