@@ -18,6 +18,11 @@ body {
   font-size: 14px;
 }
 
+.center-me{
+  margin: 0 auto 0 auto;
+  position: center;
+}
+
 .map-container {
   /*width: 800px; */
   max-width: 95%;

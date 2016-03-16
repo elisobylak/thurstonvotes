@@ -51,6 +51,10 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
+  Router.route('http://pdc.wa.gov', function() {
+    this.layout('mainNav');
+  });
+
 
 //  .___  ___.      ___      .______      .______      ___       _______  _______     __    __   _______  __      .______    _______ .______          _______.
 //  |   \/   |     /   \     |   _  \     |   _  \    /   \     /  _____||   ____|   |  |  |  | |   ____||  |     |   _  \  |   ____||   _  \        /       |
@@ -150,48 +154,49 @@ if (Meteor.isClient) {
 // the 0th element in each location array is the name of the location and address
 // the 1st element in each location array is the global latitude 
 // the 2nd element of each location array is the global longitutde
+// the 3rd element in each array is the stub url for the google maps link for each marker
 var locations = [
   //Olympia Area
-  ["Church of the Good Shepherd - 1601 North Street SE", 47.015693, -122.880327, "https://www.google.com/maps/@47.015503,-122.8809649,17z"],
-  ["Gloria Dei Lutheran Church - 1515 Harrison Ave NW", 47.045438, -122.920795, "https://www.google.com/maps/@47.0455534,-122.921139,17z"],
-  ["Crain's Office Supply - 1006 4th Ave E", 47.045903, -122.889725],
-  ["Haggen NW Fresh - 1313 Cooper Point Rd SW", 47.034041, -122.941126],
-  ["The Evergreen State College - 2700 McCann Plaza Dr NW", 47.070621, -122.975550],
-  ["Thurston County Courthouse - 2000 Lakeridge Drive SW", 47.029325, -122.912259],
+  ["Church of the Good Shepherd - 1601 North Street SE", 47.015693, -122.880327, "http://maps.google.com/maps?q=loc:"],
+  ["Gloria Dei Lutheran Church - 1515 Harrison Ave NW", 47.045438, -122.920795, "http://maps.google.com/maps?q=loc:"],
+  ["Crain's Office Supply - 1006 4th Ave E", 47.045903, -122.889725, "http://maps.google.com/maps?q=loc:"],
+  ["Haggen NW Fresh - 1313 Cooper Point Rd SW", 47.034041, -122.941126, "http://maps.google.com/maps?q=loc:"],
+  ["The Evergreen State College - 2700 McCann Plaza Dr NW", 47.070621, -122.975550, "http://maps.google.com/maps?q=loc:"],
+  ["Thurston County Courthouse - 2000 Lakeridge Drive SW", 47.029325, -122.912259, "http://maps.google.com/maps?q=loc:"],
 
   //Lacey Area
-  ["Fire District 3, Station 34 - 8407 Steilacoom Road SE", 47.046257, -122.760674],
-  ["Fire District 3, Station 35 - 3701 Willamette Drive NE", 47.087262, -122.756488],
+  ["Fire District 3, Station 34 - 8407 Steilacoom Road SE", 47.046257, -122.760674, "http://maps.google.com/maps?q=loc:"],
+  ["Fire District 3, Station 35 - 3701 Willamette Drive NE", 47.087262, -122.756488, "http://maps.google.com/maps?q=loc:"],
   ["Lacey City Hall - 420 College St SE", 47.044870, -122.822385],
-  ["Lacey Post Office - 5815 Lacey Blvd SE (next to the drive up mail boxes on Clearbrook Dr. SE)", 47.035447, -122.806746],
-  ["Martin Village - 5600 Martin Way E (Parking lot by Taco Bell)", 47.050695, -122.809381],
-  ["Woodland Retirement and Assisted Living Community - 4532 Intelco Loop SE", 46.997026, -122.829927],
+  ["Lacey Post Office - 5815 Lacey Blvd SE (next to the drive up mail boxes on Clearbrook Dr. SE)", 47.035447, -122.806746, "http://maps.google.com/maps?q=loc:"],
+  ["Martin Village - 5600 Martin Way E (Parking lot by Taco Bell)", 47.050695, -122.809381, "http://maps.google.com/maps?q=loc:"],
+  ["Woodland Retirement and Assisted Living Community - 4532 Intelco Loop SE", 46.997026, -122.829927, "http://maps.google.com/maps?q=loc:"],
 
   //Tumwater Area
-  ["Black Lake - Fire 5, Station 1 - 5911 Black Lake Boulevard SW, Olympia", 46.994528, -122.985977],
-  ["Tumwater Timberland Library - 7023 New Market St SW", 46.984924, -122.913489],
-  ["Tumwater School Administration - 621 Linwood Avenue SW", 47.006690, -122.912322],
+  ["Black Lake - Fire 5, Station 1 - 5911 Black Lake Boulevard SW, Olympia", 46.994528, -122.985977, "http://maps.google.com/maps?q=loc:"],
+  ["Tumwater Timberland Library - 7023 New Market St SW", 46.984924, -122.913489, "http://maps.google.com/maps?q=loc:"],
+  ["Tumwater School Administration - 621 Linwood Avenue SW", 47.006690, -122.912322, "http://maps.google.com/maps?q=loc:"],
 
   //North County
-  ["South Bay - Fire 8, Station 81 - 3506 Shincke Road NE, Olympia", 47.082048, -122.845710],
-  ["South Bay - Fire 8, Station 83 - 5046 Boston Harbor Rd NE, Olympia", 47.105178, -122.881059],
+  ["South Bay - Fire 8, Station 81 - 3506 Shincke Road NE, Olympia", 47.082048, -122.845710, "http://maps.google.com/maps?q=loc:"],
+  ["South Bay - Fire 8, Station 83 - 5046 Boston Harbor Rd NE, Olympia", 47.105178, -122.881059, "http://maps.google.com/maps?q=loc:"],
 
   //South County
-  ["Bucoda - 103 S Main St (across the street from the Liberty Market)", 46.800934, -122.868281],
-  ["Tenino School District Administration - 301 Old Highway 99 N", 46.861889, -122.849146],
+  ["Bucoda - 103 S Main St (across the street from the Liberty Market)", 46.800934, -122.868281, "http://maps.google.com/maps?q=loc:"],
+  ["Tenino School District Administration - 301 Old Highway 99 N", 46.861889, -122.849146, "http://maps.google.com/maps?q=loc:"],
 
   //Southeast County
-  ["Lackamas Elementary - 16240 Bald Hill Road SE, Yelm", 46.850892, -122.487265],
-  ["Rainier City Hall - 102 Rochester Street W", 46.889787, -122.688449],
-  ["Yelm School Administration - 110 1st Street N (in the parking lot across the street from the building)", 46.942029, -122.605436],
+  ["Lackamas Elementary - 16240 Bald Hill Road SE, Yelm", 46.850892, -122.487265, "http://maps.google.com/maps?q=loc:"],
+  ["Rainier City Hall - 102 Rochester Street W", 46.889787, -122.688449, "http://maps.google.com/maps?q=loc:"],
+  ["Yelm School Administration - 110 1st Street N (in the parking lot across the street from the building)", 46.942029, -122.605436, "http://maps.google.com/maps?q=loc:"],
 
   //Southwest County
-  ["Grand Mound Center - 19949 Old Highway 99 SW, Rochester", 46.798333, -123.012520],
-  ["Littlerock - Fire 11 - 10828 Littlerock Road SW", 46.930317, -122.990689],
-  ["Rochester - Fire 1, Station 3 - 18346 Albany Street SW", 46.820223, -123.096305],
+  ["Grand Mound Center - 19949 Old Highway 99 SW, Rochester", 46.798333, -123.012520, "http://maps.google.com/maps?q=loc:"],
+  ["Littlerock - Fire 11 - 10828 Littlerock Road SW", 46.930317, -122.990689, "http://maps.google.com/maps?q=loc:"],
+  ["Rochester - Fire 1, Station 3 - 18346 Albany Street SW", 46.820223, -123.096305, "http://maps.google.com/maps?q=loc:"],
 
   //Steamboat Island
-  ["Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia", 47.085221, -123.015991]
+  ["Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia", 47.085221, -123.015991, "http://maps.google.com/maps?q=loc:"]
 ];
 
 // initialize variable for acquiring the users position(latitude and Longitutde)
@@ -225,8 +230,8 @@ Template.secondPage.onCreated(function() {
         // the position of this new marker should be the lat and long of the drop box, which are the 1st and 2nd
         // elements of the locations arrays
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        // url for each location marker NOT SET UP YET
-        url: locations[i][3],
+        // url for each location marker. Concantenates the google maps url stub with the Lat and Lng from locations
+        url: locations[i][3]+locations[i][1]+","+locations[i][2],
         // tell it which map to load on, this case map.instance
         map: map.instance
       });
@@ -235,6 +240,7 @@ Template.secondPage.onCreated(function() {
         return function() {
           // tell the contents of the infoWindow to be set to the 0th elements in the locations array
           infowindow.setContent(locations[i][0]);
+          window.location.href = markers.url;
           // tell the infoWindow which map to load on, this care map.instance
           infowindow.open(map.instance, markers);
         }
@@ -264,7 +270,7 @@ Template.secondPage.helpers({
       };
     }
     // if the map is loaded but Geolocation is not available, center map around Thurston County
-    else if(GoogleMaps.loaded()) {
+    /*else if(GoogleMaps.loaded()) {
       return {
       // set the center of the map to Thurston County
       center: new google.maps.LatLng(47.0425, -122.8931),
@@ -274,7 +280,7 @@ Template.secondPage.helpers({
       draggable: false,
       zoom: 10
       };
-    } 
+    }  */
     console.log("Map is ready and showing");
   }
 });
