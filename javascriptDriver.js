@@ -39,21 +39,44 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-  // routing for fourth page called 'fourthPage'
-  Router.route('/fourth', function() {
+   Router.route('/fourth', function() {
     this.render('fourthPage');
     this.layout('mainNav');
   });
 
-  // routing for fifth page called 'fifthPage'
-  Router.route('/fifth', function() {
+   Router.route('/fifth', function() {
     this.render('fifthPage');
     this.layout('mainNav');
   });
 
-  Router.route('http://pdc.wa.gov', function() {
+   Router.route('/sixth', function() {
+    this.render('sixthPage');
     this.layout('mainNav');
   });
+
+  Router.route('/seventh', function() {
+    this.render('seventhPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/eighth', function() {
+    this.render('eighthPage');
+    this.layout('mainNav');
+  });
+
+  Router.route('/ninth', function() {
+    this.render('ninthPage');
+    this.layout('mainNav');
+  });
+
+   Router.route('/tenth', function() {
+    this.render('tenthPage');
+    this.layout('mainNav');
+  });
+
+
+
+
 
 
 //  .___  ___.      ___      .______      .______      ___       _______  _______     __    __   _______  __      .______    _______ .______          _______.

@@ -39,13 +39,36 @@ header {
   position: relative;
 }
 
+.myIframe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 0 auto;
+}
+
+
+/**
+ * Extra large button extensions. Extends `.btn`.
+ */
+.btn-xlarge {
+    margin: 10px;
+    position: center;
+    text-align: center;
+    font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 75%;
+    line-height: normal;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    }
+
 .button {
   
   /*Step 2: Basic Button Styles*/
   display: block;
   height: 80px;
   width: 80px;
-  margin: 5px;
+  margin: 10px;
   position: center;
   background: #34696f;
   border: 2px solid rgba(33, 68, 72, 0.59);
@@ -53,6 +76,7 @@ header {
   /*Step 3: Text Styles*/
   color: rgba(0, 0, 0, 0.55);
   text-align: center;
+  bottom: 8px;
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   font-size: 85%;
   
