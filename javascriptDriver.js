@@ -20,63 +20,106 @@ if (Meteor.isClient) {
   // routing for first page 
   Router.route('/', function() {
     // renders first page called '/'
-    this.render('firstPage');
+    this.render('homePage');
     // gets layout from mainNav
     this.layout('mainNav');
   });
 
   // routing for second page  
-  Router.route('/second', function() {
+  Router.route('/mapPage', function() {
     // the Map Page called 'secondPage'
-    this.render('secondPage');
+    this.render('mapPage');
     // gets layout from mainNav
     this.layout('mainNav');
   });
 
   // routing for third page called 'thirdPage'
-  Router.route('/third', function() {
-    this.render('thirdPage');
+  Router.route('/electionResults', function() {
+    this.render('electionResults');
     this.layout('mainNav');
   });
 
-   Router.route('/fourth', function() {
-    this.render('fourthPage');
+   Router.route('/registerToVote', function() {
+    this.render('registerToVote');
     this.layout('mainNav');
   });
 
-   Router.route('/fifth', function() {
-    this.render('fifthPage');
+   Router.route('/currentElectionsMenu', function() {
+    this.render('currentElectionsMenu');
     this.layout('mainNav');
   });
 
-   Router.route('/sixth', function() {
-    this.render('sixthPage');
+   Router.route('/electionDates', function() {
+    this.render('electionDates');
     this.layout('mainNav');
   });
 
-  Router.route('/seventh', function() {
-    this.render('seventhPage');
+  Router.route('/myDistrictAndOfficials', function() {
+    this.render('myDistrictAndOfficials');
     this.layout('mainNav');
   });
 
-  Router.route('/eighth', function() {
-    this.render('eighthPage');
+  Router.route('/precinctDisctrictMaps', function() {
+    this.render('precinctDisctrictMaps');
     this.layout('mainNav');
   });
 
-  Router.route('/ninth', function() {
-    this.render('ninthPage');
+  Router.route('/CSPAN', function() {
+    this.render('CSPAN');
     this.layout('mainNav');
   });
 
-   Router.route('/tenth', function() {
-    this.render('tenthPage');
+   Router.route('/PDC', function() {
+    this.render('PDC');
     this.layout('mainNav');
   });
 
 
 
+   Router.route('/accessibleVoting', function() {
+    this.render('accessibleVoting');
+    this.layout('mainNav');
+  });
 
+   Router.route('/ballotReturns', function() {
+    this.render('ballotReturns');
+    this.layout('mainNav');
+  });
+
+   Router.route('/militaryAndOverseas', function() {
+    this.render('militaryAndOverseas');
+    this.layout('mainNav');
+  });
+
+   Router.route('/needABallot', function() {
+    this.render('needABallot');
+    this.layout('mainNav');
+  });
+
+   Router.route('/registrationDeadlines', function() {
+    this.render('registrationDeadlines');
+    this.layout('mainNav');
+  });
+
+   Router.route('/sampleBallot', function() {
+    this.render('sampleBallot');
+    this.layout('mainNav');
+  });
+
+   Router.route('/statistics', function() {
+    this.render('statistics');
+    this.layout('mainNav');
+  });
+
+   Router.route('/voterPamphlet', function() {
+    this.render('voterPamphlet');
+    this.layout('mainNav');
+  });
+
+   Router.route('/ballotReceived', function() {
+    this.render('ballotReceived');
+    this.layout('mainNav');
+  });
 
 
 //  .___  ___.      ___      .______      .______      ___       _______  _______     __    __   _______  __      .______    _______ .______          _______.
@@ -91,7 +134,7 @@ if (Meteor.isClient) {
 if (Meteor.isClient) { 
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
     // helper text for olympia template
     olympia: [
       { text: "Church of the Good Shepherd - 1601 North Street SE"},
@@ -104,7 +147,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
     // helper text for lacey template
     lacey: [
       { text: "Fire District 3, Station 34 - 8407 Steilacoom Road SE"},
@@ -117,7 +160,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for tumwater template
       tumwater: [
         { text: "Black Lake - Fire 5, Station 1 - 5911 Black Lake Boulevard SW, Olympia"},
@@ -127,7 +170,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for northCounty template
       northCounty: [
         { text: "South Bay - Fire 8, Station 81 - 3506 Shincke Road NE, Olympia"},
@@ -136,7 +179,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for southCounty template
       southCounty: [
         { text: "Bucoda - 103 S Main St (across the street from the Liberty Market)"},
@@ -145,7 +188,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for southeastCounty template
       southeastCounty: [
         { text: "Lackamas Elementary - 16240 Bald Hill Road SE, Yelm"},
@@ -155,7 +198,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for southwestCounty template
       southwestCounty: [
         { text: "Grand Mound Center - 19949 Old Highway 99 SW, Rochester"},
@@ -165,7 +208,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.secondPage.helpers({
+  Template.mapPage.helpers({
       // helper text for steamboat template
       steamboat: [
         { text: "Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia"}
@@ -225,7 +268,7 @@ var locations = [
 // initialize variable for acquiring the users position(latitude and Longitutde)
 var latLng;
 
-Template.secondPage.onCreated(function() {
+Template.mapPage.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready("exampleMap", function(map) {
     // set variable latLng to get geolocation from device GPS services if they are turned on
@@ -274,7 +317,7 @@ Template.secondPage.onCreated(function() {
 });
 
 // helper code for secondPage, which is the Map Page
-Template.secondPage.helpers({
+Template.mapPage.helpers({
   exampleMapOptions: function() {
     // set latLng to Geolocation position from GPS services
     latLng = Geolocation.latLng();
