@@ -2,8 +2,8 @@
 body {
   font-family: sans-serif;
   background-color: #f2f2f2;
-  /*background-image: linear-gradient(to bottom, #ffb3b3, #e6e6e6, #b3b3ff 100%); */
-  /*background-image: linear-gradient(to bottom, #0000b3, #e6e6e6, #b32400 100%); */
+  /*background-image: linear-gradient(to bottom, #ffb3b3, #e6e6e, #b3b3ff); */
+  background-image: repeating-linear-gradient(-10deg, white, white 75px, #FF714D 75px, #E65733, #FF714D 150px);
   background-attachment: fixed;
 
   position: absolute;
@@ -26,6 +26,11 @@ body {
   max-height: 75%;
   height: 300px; 
 }
+
+/*.list-group {
+  max-width: 95%
+  position: center;
+}*/
 
 header {
   background: transparent;
@@ -104,6 +109,12 @@ a.button:hover {
   display: block;
 }
 
+h1 {
+  font-size: 5.0em;
+  margin: 10px;
+  padding: 15px;
+}
+
 h2 {
   font-size: 1.0em;
   margin: 0;
@@ -119,8 +130,8 @@ form {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 15px;
   background: linen;
 }
 

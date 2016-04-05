@@ -26,9 +26,9 @@ if (Meteor.isClient) {
   });
 
   // routing for second page  
-  Router.route('/mapPage', function() {
+  Router.route('/Ballot Drop Box Sites', function() {
     // the Map Page called 'secondPage'
-    this.render('mapPage');
+    this.render('Ballot Drop Box Sites');
     // gets layout from mainNav
     this.layout('mainNav');
   });
@@ -49,6 +49,11 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
+   Router.route('/BallotDropBoxSites', function() {
+    this.render('BallotDropBoxSites');
+    this.layout('mainNav');
+  });
+
    Router.route('/electionDates', function() {
     this.render('electionDates');
     this.layout('mainNav');
@@ -59,10 +64,6 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-  Router.route('/precinctDisctrictMaps', function() {
-    this.render('precinctDisctrictMaps');
-    this.layout('mainNav');
-  });
 
   Router.route('/CSPAN', function() {
     this.render('CSPAN');
@@ -134,7 +135,7 @@ if (Meteor.isClient) {
 if (Meteor.isClient) { 
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
     // helper text for olympia template
     olympia: [
       { text: "Church of the Good Shepherd - 1601 North Street SE"},
@@ -147,7 +148,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
     // helper text for lacey template
     lacey: [
       { text: "Fire District 3, Station 34 - 8407 Steilacoom Road SE"},
@@ -160,7 +161,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for tumwater template
       tumwater: [
         { text: "Black Lake - Fire 5, Station 1 - 5911 Black Lake Boulevard SW, Olympia"},
@@ -170,7 +171,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for northCounty template
       northCounty: [
         { text: "South Bay - Fire 8, Station 81 - 3506 Shincke Road NE, Olympia"},
@@ -179,7 +180,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for southCounty template
       southCounty: [
         { text: "Bucoda - 103 S Main St (across the street from the Liberty Market)"},
@@ -188,7 +189,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for southeastCounty template
       southeastCounty: [
         { text: "Lackamas Elementary - 16240 Bald Hill Road SE, Yelm"},
@@ -198,7 +199,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for southwestCounty template
       southwestCounty: [
         { text: "Grand Mound Center - 19949 Old Highway 99 SW, Rochester"},
@@ -208,7 +209,7 @@ if (Meteor.isClient) {
   });
 
   // helper code for the template called secondPage, whic is the Map Page
-  Template.mapPage.helpers({
+  Template.BallotDropBoxSites.helpers({
       // helper text for steamboat template
       steamboat: [
         { text: "Fire 13, Station 1 - 3707 Steamboat Loop NW, Olympia"}
@@ -268,7 +269,7 @@ var locations = [
 // initialize variable for acquiring the users position(latitude and Longitutde)
 var latLng;
 
-Template.mapPage.onCreated(function() {
+Template.BallotDropBoxSites.onCreated(function() {
   // We can use the `ready` callback to interact with the map API once the map is ready.
   GoogleMaps.ready("exampleMap", function(map) {
     // set variable latLng to get geolocation from device GPS services if they are turned on
@@ -317,7 +318,7 @@ Template.mapPage.onCreated(function() {
 });
 
 // helper code for secondPage, which is the Map Page
-Template.mapPage.helpers({
+Template.BallotDropBoxSites.helpers({
   exampleMapOptions: function() {
     // set latLng to Geolocation position from GPS services
     latLng = Geolocation.latLng();
