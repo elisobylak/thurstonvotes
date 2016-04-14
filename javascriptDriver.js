@@ -75,6 +75,11 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
+   Router.route('/precinctDistrictMaps', function() {
+    this.render('precinctDistrictMaps');
+    this.layout('mainNav');
+  });
+
 
 
    Router.route('/accessibleVoting', function() {
