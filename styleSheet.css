@@ -88,7 +88,7 @@ header {
 }
 
 .btn-group-xs{
-  margin: 10%;
+  margin: 9%;
   position: center;
   margin-bottom: 0px;
 
@@ -102,18 +102,20 @@ header {
 }
 
 .navbar-inverse{
-  background: repeating-linear-gradient(20deg, white 15px, #88B5FB 15px, #f36a58, #88B5FB 20px);
+  /*background: repeating-linear-gradient(20deg, white 15px, #88B5FB 15px, #f36a58, #88B5FB 20px);*/
 }
+
+
 
 #login-buttons {
   display: block;
 }
 
 h1 {
-
+  font-size: 8vw;
   text-align: center;
   display: inline;
-  color: #F1F1F1; 
+  color: #2273f7; 
   text-shadow: black 0.1em 0.1em 0.3em
 }
 
@@ -137,7 +139,7 @@ h3 {
 
 ul {
 
-  background: #f3dabe;
+  background: radial-gradient(white, #88B5FB);;
 }
 
 .delete {
