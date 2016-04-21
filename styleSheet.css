@@ -33,6 +33,19 @@ body {
 }
 
 
+/* what centers the text under the button */
+.row {
+    text-align: justify;
+    width: [width of img];
+}
+
+.row img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 /*.list-group {
   max-width: 95%
   position: center;
