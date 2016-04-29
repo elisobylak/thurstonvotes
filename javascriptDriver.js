@@ -70,8 +70,8 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-   Router.route('/PDC', function() {
-    this.render('PDC');
+   Router.route('/RTV', function() {
+    this.render('RTV');
     this.layout('mainNav');
   });
 
