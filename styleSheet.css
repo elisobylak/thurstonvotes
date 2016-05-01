@@ -35,7 +35,7 @@ body {
 .caption {
     /* Make the caption a block so it occupies its own line. */
     display: block;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -63,6 +63,15 @@ header {
  */
 .btn-test {
   margin: 9%;
+}
+
+.navbar {
+  position: relative;
+  max-width: 100%;
+  min-height: 0px;
+  max-height: 100px;
+  margin-bottom: 0px;
+
 }
 
 
@@ -110,9 +119,7 @@ header {
 }
 
 
-.navbar-inverse{
-  /*background: repeating-linear-gradient(20deg, white 15px, #88B5FB 15px, #f36a58, #88B5FB 20px);*/
-}
+
 
 
 
@@ -145,6 +152,11 @@ h3 {
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
+.inner{
+  display: inline-block;
+  margin:-15; padding:0;
+}
+
 
 ul {
 
@@ -163,8 +175,6 @@ ul {
 li {
   position: relative;
   list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
 }
 
 
