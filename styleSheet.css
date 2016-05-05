@@ -141,7 +141,7 @@ h2 {
 }
 
 h3 {
-  text-align: justify;
+  text-align: center;
   margin: 0 auto;
   width: 8em;
 
@@ -150,6 +150,11 @@ h3 {
   color: rgba(0, 0, 0, 0.55);
   bottom: 8px;
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+h4 {
+    text-decoration: underline;
+    text-align: center;
 }
 
 .inner{

@@ -132,6 +132,11 @@
 <template name="currentElectionsMenu">
 <!-- First Row with code for picture icon and text for three button -->
 <img src="top-section-current-election.png" class="img-responsive">
+
+<div id="MyEdit" class="h4">
+    This text will change
+</div>
+
 <div class="row">
 	<a href="/registrationDeadlines" class="btn-group-xs col-xs-1"><img src="ElectionDates-RegDeadlines.png" height="65" width="65"><h3><span class="caption">Registration Deadlines</span></h3></a>
         <a href="/voterPamphlet" class="btn-group-xs col-xs-1"><img src="VotersPamphlet.png" height="65" width="65"><h3><span class="caption">Voter's Pamphlet</span></h3></a>
@@ -151,6 +156,7 @@
 	<a href="/statistics" class="btn-group-xs col-xs-1"><img src="Statistics.png" height="65" width="65"><h3><span class="caption">Statistics</span></h3></a>
  	<a href="/ballotReturns" class="btn-group-xs col-xs-1"><img src="ReturnsDistrict.png" height="65" width="65"><h3><span class="caption">Ballot Returns by District</span></h3></a>
 </div>
+                                
 </template>
 
 <template name="accessibleVoting">
@@ -237,9 +243,10 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
         			<div class="row inner">
 	                    <a href="http://www.co.thurston.wa.us/auditor/elections/electns.htm">Visit Our Website</a>
 	                </div>
-	                <a style="float:right;" class="inner" href="/"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
+	                <a style="float:right;" class="inner" href="/"><i class="fa fa-home fa-3x"></i></a>
         </center>
     </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
        {{> yield }}
    </body>
 </template>
