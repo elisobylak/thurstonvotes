@@ -127,33 +127,10 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-
-
-function TimeToVote() {
-    var date = new Date("April 25, 2016");
-    var before = "You have ";
-    var description = " General Election";
-    var now = new Date();
-    var diff = date.getTime() - now.getTime();
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    if (days > 1) {
-    document.getElementById("MyEdit").innerHTML = (before);
-    document.getElementById("MyEdit").innerHTML = (days+2 + " days to register and be eligible to vote in the" + description);
-    }
-    else if (days == 1) {
-    document.getElementById("MyEdit").innerHTML = ("You have only 3 days to register and be eligible to vote in the" + description);
-    }
-    else if (days == 0) {
-    document.getElementById("MyEdit").innerHTML = ("TOMORROW is the last day to register and be eligible to vote in the" + description);
-    }
-    else {
-    document.getElementById("MyEdit").innerHTML = ("TODAY is the last day to register and be eligible to vote in the" + description);
-    }
-}
-
-window.onload = TimeToVote;
-
-
+   Router.route('/contactUs', function() {
+    this.render('contactUs');
+    this.layout('mainNav');
+  });
 
 
 //  .___  ___.      ___      .______      .______      ___       _______  _______     __    __   _______  __      .______    _______ .______          _______.
