@@ -7,25 +7,21 @@
 <template name="homePage">
 <img src="top-section-solid-background.png" class="img-responsive">
 
-<div class="container-fluid">
-<div class="row">
-	<a href="/electionResults" class="btn-group-xs col-xs-1"><img src="results.png" heihgt="65" width="65"><span class="caption"> Election Results</span></a>
-	<a href="/registerToVote" class="btn-group-xs col-xs-1"><img src="MyVote.png" height="65" width="65"><span class="caption"> Register to Vote</span></a>
-	<a href="/currentElectionsMenu" class="btn-group-xs col-xs-1"><img src="Current-Election.png" height="65" width="65"><span class="caption"> Current Elections Menu</span></a>
-</div>
-
-<div class="row">
-	<a href="/BallotDropBoxSites" class="btn-group-xs col-xs-1"><img src="DropBox.png" height="65" width="65"><h3><span class="caption"> Ballot Drop Box Sites</span></h3></a>
-	<a href="/electionDates" class="btn-group-xs col-xs-1"><img src="ElectionDates-RegDeadlines.png" height="65" width="65"><h3><span class="caption">Election Dates</span></h3></a>
-	<a href="/myDistrictAndOfficials" class="btn-group-xs col-xs-1"><img src="DistElect.png" height="65" width="65"><h3><span class="caption"> My District and Elected Officials</span></h3></a>
-</div>
-
-<div class="row">
-	<a href="/precinctDistrictMaps" class="btn-group-xs col-xs-1"><img src="maps.png" height="65" width="65"><h3><span class="caption">District & Precinct Maps</span></h3></a>
-	<a href="/CSPAN" class="btn-group-xs col-xs-1"><img src="cspan.png" height="65" width="65"><h3><span class="caption">C-SPAN</span></h3></a>
-	<a href="/RTV" class="btn-group-xs col-xs-1"><img src="RockTheVote.png" height="65" width="65"><h3><span class="caption">Rock The Vote</span></h3></a>
-</div>
-</div>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/electionResults"><img class="img-responsive" src="results.png" heihgt="75" width="75"></a>Election Results</li>
+  <li class="flex-item"><a href="/registerToVote"><img class="img-responsive" src="MyVote.png" heihgt="75" width="75"></a>Register To Vote</li>
+  <li class="flex-item"><a href="/currentElectionsMenu"><img class="img-responsive" src="Current-Election.png"  heihgt="75" width="75"></a>Current Elections Menu</li>
+</ul>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/BallotDropBoxSites"><img class="img-responsive" src="DropBox.png"  heihgt="75" width="75"></a>Ballot Drop Box Sites</li>
+  <li class="flex-item"><a href="/electionDates"><img class="img-responsive" src="ElectionDates-RegDeadlines.png"  heihgt="75" width="75"></a>Election Dates</li>
+  <li class="flex-item"><a href="/myDistrictAndOfficials"><img class="img-responsive" src="DistElect.png"  heihgt="75" width="75"></a>My District & Elected Officials</li>
+</ul>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/precinctDistrictMaps"><img class="img-responsive" src="maps.png" heihgt="75" width="75"></a>District & Precinct Maps</li>
+  <li class="flex-item"><a href="/CSPAN"><img class="img-responsive" src="cspan.png" heihgt="75" width="75"></a>C-SPAN</li>
+  <li class="flex-item"><a href="/RTV"><img class="img-responsive" src="RockTheVote.png"  heihgt="75" width="75"></a>Rock The Vote</li>
+</ul>
 
 </template>
 
@@ -167,25 +163,21 @@ window.onload = TimeToVote();
 
 </script>
 
-<div class="row">
-	<a href="/registrationDeadlines" class="btn-group-xs col-xs-1"><img src="ElectionDates-RegDeadlines.png" height="65" width="65"><h3><span class="caption">Registration Deadlines</span></h3></a>
-        <a href="/voterPamphlet" class="btn-group-xs col-xs-1"><img src="VotersPamphlet.png" height="65" width="65"><h3><span class="caption">Voter's Pamphlet</span></h3></a>
-        <a href="/sampleBallot" class="btn-group-xs col-xs-1"><img src="SampleBallot.png" height="65" width="65"><h3><span class="caption">Sample Ballot</span></h3></a>
-
-</div>
-
-<div class="row">
-	<a href="/needABallot" class="btn-group-xs col-xs-1"><img src="NeedBallot.png" height="65" width="65"><h3><span class="caption">Need a Ballot?</span></h3></a>
-  	<a href="/militaryAndOverseas" class="btn-group-xs col-xs-1"><img src="military.png" height="65" width="65"><h3><span class="caption">Military and Overseas Voters</span></h3></a>
-    <a href="/accessibleVoting" class="btn-group-xs col-xs-1"><img src="accessible.png" height="65" width="65"><h3><span class="caption">Accessible Voting</span></h3></a>
-
-</div>
-
-<div class="row">
-    <a href="/ballotReceived" class="btn-group-xs col-xs-1"><img src="BallotReceived.png" height="65" width="65"><h3><span class="caption">Was My Ballot Received?</span></h3></a>
-	<a href="/statistics" class="btn-group-xs col-xs-1"><img src="Statistics.png" height="65" width="65"><h3><span class="caption">Statistics</span></h3></a>
- 	<a href="/ballotReturns" class="btn-group-xs col-xs-1"><img src="ReturnsDistrict.png" height="65" width="65"><h3><span class="caption">Ballot Returns by District</span></h3></a>
-</div>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/registrationDeadlines" ><img class="img-responsive" src="ElectionDates-RegDeadlines.png" heihgt="75" width="75"></a>Registration Deadlines</li>
+  <li class="flex-item"><a href="/voterPamphlet"><img class="img-responsive" src="VotersPamphlet.png" heihgt="75" width="75"></a>Voter's Pamphlet</li>
+  <li class="flex-item"><a href="/sampleBallot" ><img class="img-responsive" src="SampleBallot.png"  heihgt="75" width="75"></a>Sample Ballot</li>
+</ul>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/needABallot"><img class="img-responsive" src="NeedBallot.png"  heihgt="75" width="75"></a>Need a Ballot?</li>
+  <li class="flex-item"><a href="/militaryAndOverseas"><img class="img-responsive" src="military.png"  heihgt="75" width="75"></a>Military & Overseas Voters</li>
+  <li class="flex-item"><a href="/accessibleVoting"><img class="img-responsive" src="accessible.png"  heihgt="75" width="75"></a>Accessible Voting</li>
+</ul>
+<ul class="flex-container">
+  <li class="flex-item"><a href="/ballotReceived"><img class="img-responsive" src="BallotReceived.png" heihgt="75" width="75"></a>Was My Ballot Recieved?</li>
+  <li class="flex-item"><a href="/statistics" ><img class="img-responsive" src="Statistics.png" heihgt="75" width="75"></a>Statistics</li>
+  <li class="flex-item"><a href="/ballotReturns"><img class="img-responsive" src="ReturnsDistrict.png"  heihgt="75" width="75"></a>Ballot Returns by District</li>
+</ul>
                                 
 </template>
 
@@ -266,7 +258,7 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
 <template name="mainNav">
 	<body>
      <div class="navbar navbar-inverse">
-     	<img style="float:left;" class="inner" src="TCLogo-800x568.png" height="65" width="120" margin="0">
+     	<img style="float:left;" class="inner" src="TCLogo-800x568.png" height="85" width="120" margin="0">
 			<center>
 				<br>
 	    			<div style="float:left;" class="row inner" margin="0">

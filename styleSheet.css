@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
@@ -23,6 +25,34 @@ body {
   font-size: 14px;
 }
 
+.flex-container {
+  padding: 0;
+  margin: 5px;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 75px;
+  height: 75px;
+  margin-top: 5px;
+  margin-bottom: 11%;
+  
+  color: rgba(0, 0, 0, 0.55);
+  font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-size: 85%;
+  text-align: center;
+}
+
 .map-container {
   /*width: 800px; */
   max-width: 95%;
@@ -35,20 +65,12 @@ body {
     /* Make the caption a block so it occupies its own line. */
     display: block;
     text-align: center;
-
 }
 
-.row img {
-    display: block;
-    margin: 0 auto;
+.img {
+  vertical-align: center;
+  display: inline;
 }
-
-
-
-/*.list-group {
-  max-width: 95%
-  position: center;
-}*/
 
 header {
   background: transparent;
@@ -72,49 +94,9 @@ header {
   margin: 9%;
 }
 
-
-.button {
-  /*Step 2: Basic Button Styles*/
-  height: 80px;
-  width: 80px;
-  margin: 20px;
-  text-align: center;
-
-  
-  /*Step 3: Text Styles*/
-  color: rgba(0, 0, 0, 0.55);
-  bottom: 8px;
-  font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  font-size: 75%;
-
-}
-
-.center-justified {
-  text-align: justify;
-  margin: 0 auto;
-  width: 30em;
-}
-
-.col-xs-1 {
-  margin-bottom: 0%;
-}
-
-.btn-group-xs{
-  margin: 9%;
-  position: center;
-  margin-bottom: 0px;
-
-
-  display: block;
-
-  /*Step 3: Text Styles*/
-  color: rgba(0, 0, 0, 0.55);
-  font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  font-size: 85%;
-}
-
 .navbar-inverse{
   /*background: repeating-linear-gradient(20deg, white 15px, #88B5FB 15px, #f36a58, #88B5FB 20px);*/
+  margin-bottom: 0;
 }
 
 .inner{
@@ -151,33 +133,12 @@ h3 {
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
-
-ul {
-
-  background: radial-gradient(white, #88B5FB);;
-}
-
-.delete {
-  float: right;
-  font-weight: bold;
-  background: none;
-  font-size: 1em;
-  border: none;
-  position: relative;
-}
-
-li {
-  position: relative;
-  list-style: none;
-  padding: 15px;
-  border-bottom: #eee solid 1px;
-}
+.h4 {
+  margin: 0 auto;
 
 
-header .hide-completed {
-  float: right;
-}
-
-.toggle-private {
-  margin-left: 5px;
+  /*Step 3: Text Styles*/
+  color: rgba(0, 0, 0, 0.55);
+  bottom: 8px;
+  font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
