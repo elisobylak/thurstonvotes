@@ -12,9 +12,8 @@ body {
   background-attachment: fixed;
 
   overflow-x:hidden;
-  overflow-y:auto;
 
-  height: 100em;
+  height: 100%;
   max-width: 100%;
   position: center;
 
@@ -24,31 +23,32 @@ body {
   font-size: 14px;
 }
 
-.myClass {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
 .map-container {
   /*width: 800px; */
-  height: 550px;
-  width: 100%;
+  max-width: 95%;
   position: center;
-  margin: 0 auto 0 auto;   
+  margin: 0 auto 0 auto;
+  max-height: 75%;
+   
 }
-
 .caption {
     /* Make the caption a block so it occupies its own line. */
-    position: left;
     display: block;
-    text-align: left;
+    text-align: center;
 
 }
 
 .row img {
+    display: block;
     margin: 0 auto;
 }
+
+
+
+/*.list-group {
+  max-width: 95%
+  position: center;
+}*/
 
 header {
   background: transparent;
@@ -58,11 +58,11 @@ header {
 }
 
 .myIframe {
-    display: block;       /* iframes are inline by default */
-    background: #000;
-    border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
-    width: 100vw;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
 }
 
 /**
@@ -72,12 +72,20 @@ header {
   margin: 9%;
 }
 
-.navbar {
-  position: relative;
-  max-width: 100%;
-  min-height: 0px;
-  max-height: 100px;
-  margin-bottom: 0px;
+
+.button {
+  /*Step 2: Basic Button Styles*/
+  height: 80px;
+  width: 80px;
+  margin: 20px;
+  text-align: center;
+
+  
+  /*Step 3: Text Styles*/
+  color: rgba(0, 0, 0, 0.55);
+  bottom: 8px;
+  font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-size: 75%;
 
 }
 
@@ -88,54 +96,31 @@ header {
 }
 
 .col-xs-1 {
-  position: relative;
-  min-height: 1px;
-  padding-right: -15px;
-  padding-left: 20px;
+  margin-bottom: 0%;
 }
 
 .btn-group-xs{
-  margin: 100px;
+  margin: 9%;
   position: center;
   margin-bottom: 0px;
 
+
+  display: block;
+
   /*Step 3: Text Styles*/
   color: rgba(0, 0, 0, 0.55);
-  text-align: center;
-  text-decoration: none;
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   font-size: 85%;
 }
 
-.btn-group-xs:hover {
-  text-decoration: none !important;
+.navbar-inverse{
+  /*background: repeating-linear-gradient(20deg, white 15px, #88B5FB 15px, #f36a58, #88B5FB 20px);*/
 }
 
-.btn-group-xs:onclick {
-  text-decoration: none;
+.inner{
+  display: inline-block;
+  margin:0; padding:0;
 }
-
-.btn-group-xs:visited {
-  text-decoration: none;
-}
-
-.btn-group-xs:active {
-  text-decoration: none;
-}
-
-.btn-group-xs:focus {
-  text-decoration: none;
-}
-
-
-.container-fluid {
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
 
 #login-buttons {
   display: block;
@@ -155,7 +140,7 @@ h2 {
 }
 
 h3 {
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
   width: 8em;
 
@@ -164,16 +149,6 @@ h3 {
   color: rgba(0, 0, 0, 0.55);
   bottom: 8px;
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-h4 {
-    text-decoration: underline;
-    text-align: center;
-}
-
-.inner{
-  display: inline-block;
-  margin:0; padding:0;
 }
 
 
@@ -194,6 +169,8 @@ ul {
 li {
   position: relative;
   list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
 }
 
 
