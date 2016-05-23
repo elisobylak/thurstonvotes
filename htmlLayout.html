@@ -10,7 +10,7 @@
 <ul class="flex-container">
   <li class="flex-item"><a href="/electionResults"><img class="img-responsive" src="results.png" heihgt="75" width="75"></a>Election Results</li>
   <li class="flex-item"><a href="/registerToVote"><img class="img-responsive" src="MyVote.png" heihgt="75" width="75"></a>Register To Vote</li>
-  <li class="flex-item"><a href="/currentElectionsMenu"><img class="img-responsive" src="Current-Election.png"  heihgt="75" width="75"></a>Current Elections Menu</li>
+  <li class="flex-item"><a href="/currentElectionsMenu"><img class="img-responsive" src="Current-Election.png"  heihgt="75" width="75"></a>Current Elections</li>
 </ul>
 <ul class="flex-container">
   <li class="flex-item"><a href="/BallotDropBoxSites"><img class="img-responsive" src="DropBox.png"  heihgt="75" width="75"></a>Ballot Drop Box Sites</li>
@@ -182,15 +182,16 @@ window.onload = TimeToVote();
 </template>
 
 <template name="accessibleVoting">
-	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/VAAC/accessible_current_election.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/redirects/av-redirect.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
 </template> 
 
 <template name="ballotReturns">
-	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/2016elections/February/returns_district.pdf" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<br>
+	<center><a href="http://www.co.thurston.wa.us/auditor/elections/2016Elections/Presidential_Primary/returns_district.pdf" download><i class="fa fa-cloud-download fa-4x" aria-hidden="true"></i><center><h2>Download Ballot Returns PDF</h2></center></a></center>
 </template> 
 
 <template name="militaryAndOverseas">
-	<iframe src="https://thurstoncounty.everyonecounts.com/page/557/1075" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/redirects/mo-redirect.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
 </template> 
 
 <template name="needABallot">
@@ -203,18 +204,17 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
 </template> 
 
 <template name="sampleBallot">
-	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/2016elections/February/Sample_Ballot.pdf" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<br>
+	<center><a href="http://www.co.thurston.wa.us/auditor/Elections/2016elections/Presidential_Primary/Sample_Ballot.pdf" download><i class="fa fa-cloud-download fa-4x" aria-hidden="true"></i><center><h2>Download Sample Ballot PDF</h2></center></a></center>
 </template> 
 
 <template name="statistics">
-	<center><a href="http://www.co.thurston.wa.us/auditor/Elections/2016elections/February/stats.pdf" download>Download Statistics PDF</a></center>
-		<!--
-	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/2016elections/February/stats.pdf" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
-		-->
+	<br>
+	<center><a href="http://www.co.thurston.wa.us/auditor/elections/2016Elections/Presidential_Primary/stats.pdf" download><i class="fa fa-cloud-download fa-4x" aria-hidden="true"></i><center><h2>Download Statistics PDF</h2></center></a></center>
 </template> 
 
 <template name="voterPamphlet">
-	<iframe src="http://www.co.thurston.wa.us/auditor/elections/2016elections/february/vp/vp_main.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/redirects/vp-redirect.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
 </template> 
 
 <template name="ballotReceived">
@@ -222,7 +222,7 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
 </template> 
 
 <template name="electionResults">
-	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/history/archive.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/redirects/er-redirect.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
 </template>  
 
 <template name="CSPAN">
@@ -246,11 +246,18 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
 </template>
 
 <template name="electionDates">
+	<embed src="http://www.co.thurston.wa.us/auditor/Elections/election_dates.htm" width=100% height=100% />
+	<!--
 	<iframe src="http://www.co.thurston.wa.us/auditor/Elections/election_dates.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+-->
 </template>
 
 <template name="contactUs">
 	<iframe src="http://www.co.thurston.wa.us/auditor/Forms/Hours&Contact.htm" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
+</template>
+
+<template name="facebook">
+	<iframe src="https://www.facebook.com/Thurston-County-Auditors-Office-328306377190679/" border='0' width='100%' height='500px' marginheight='0' marginwidth='0' frameborder='0' style='float:left; margin-left:0px' allowfullscreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe>
 </template>
 
 
@@ -258,25 +265,22 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
 <template name="mainNav">
 	<body>
      <div class="navbar navbar-inverse">
-     	<img style="float:left;" class="inner" src="TCLogo-800x568.png" height="85" width="120" margin="0">
 			<center>
 				<br>
 	    			<div style="float:left;" class="row inner" margin="0">
-                        <a href="https://www.facebook.com/Thurston-County-Auditors-Office-328306377190679/"><i class="fa fa-facebook-official fa-2x"></i></a>
-                        <a href="https://twitter.com/TCAuditor"><i class="fa fa-twitter-square fa-2x"></i></a>
-                        <a href="https://www.instagram.com/thurstonauditor/"><i class="fa fa-instagram fa-2x"></i></a>
-                        <a href="https://www.youtube.com/channel/UCxORZbqlmF1kADpJAu9EIOg"><i class="fa fa-youtube-square fa-2x"></i></a>
-                        <a href="https://www.periscope.tv/"><i class="fa fa-map-marker fa-2x"></i></a>
+                        <a href="/facebook"><i class="fa fa-facebook-official fa-2x fa-fw"></i></a>
+                        <a href="https://twitter.com/TCAuditor"><i class="fa fa-twitter-square fa-2x fa-fw"></i></a>
+                        <a href="https://www.instagram.com/thurstonauditor/"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
+                        <a href="https://www.youtube.com/channel/UCxORZbqlmF1kADpJAu9EIOg"><i class="fa fa-youtube-square fa-2x fa-fw"></i></a>
+                        <a href="https://www.periscope.tv/"><i class="fa fa-map-marker fa-2x fa-fw"></i></a>
                         <br>
                         <a href="http://www.co.thurston.wa.us/auditor/elections/electns.htm">Visit Our Website</a>
         			</div>
 
 			     <div class="btn-group" style="float:right;">
-	                	   <a class="inner" href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
-	                	   <a class="inner" href="/contactUs"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
-				   <a class="inner dropdown-toggle" data toggle="dropdown" href="#" aria-expanded="false"><span class="fa fa-cog fa-2x" aria-hidden="true"></span>
-				   </a>
-				   <ul class="dropdown-menu dropdown-menu-right"><li><a href="#">Themes Coming Soon</a></li></ul>
+			     			<a href="javascript:history.back(1)"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></a> 
+	                	   <a class="inner" href="/"><i class="fa fa-home fa-2x fa-fw" aria-hidden="true"></i></a>
+	                	   <a class="inner" href="/contactUs"><i class="fa fa-user fa-2x fa-fw" aria-hidden="true"></i></a>
 			     </div>
         </center>
     </div>

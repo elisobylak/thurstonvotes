@@ -80,8 +80,6 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-
-
    Router.route('/accessibleVoting', function() {
     this.render('accessibleVoting');
     this.layout('mainNav');
@@ -129,6 +127,11 @@ if (Meteor.isClient) {
 
    Router.route('/contactUs', function() {
     this.render('contactUs');
+    this.layout('mainNav');
+  });
+
+   Router.route('/facebook', function() {
+    this.render('facebook');
     this.layout('mainNav');
   });
 
