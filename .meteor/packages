@@ -18,9 +18,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
-dburles:google-maps
-mdg:geolocation
-iron:router
-twbs:bootstrap
-fortawesome:fontawesome
-shcherbin:flex-grid
+dburles:google-maps		# Google maps package 
+mdg:geolocation			# Geolocation
+iron:router				# Routing for multiple pages
+twbs:bootstrap			# Packadge for bootstrap
+fortawesome:fontawesome	# Packadge for font awesome and icons 
+shcherbin:flex-grid		# Flex grid for homepage layout

@@ -60,6 +60,14 @@ body {
   height: 80vh;
 }
 
+.box_round {
+  height: 75%;
+  -moz-border-radius: 10px; /* FF1+ */
+  -webkit-border-radius: 10px; /* Saf3-4 */
+  border-radius: 10px; /* Opera 10.5, IE 9, Saf5, Chrome */
+  background-color: #cee0fd;
+}
+
 .map-canvas {
   margin: 0;
   padding: 0;
@@ -157,4 +165,11 @@ h3 {
   color: rgba(0, 0, 0, 0.55);
   bottom: 8px;
   font: bold 1em/15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+h5 {
+  margin-bottom: 2px;
+  margin-top: 2px;
+  padding: 0;
+  color:#cee0fd;
 }
