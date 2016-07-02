@@ -10,7 +10,7 @@
 <ul class="flex-container">
   <li class="flex-item"><a href="/electionResults"><img class="img-responsive" src="results.png" heihgt="75" width="75"></a>Election Results</li>
   <li class="flex-item"><a href="/registerToVote"><img class="img-responsive" src="MyVote.png" heihgt="75" width="75"></a>Register To Vote</li>
-  <li class="flex-item"><a href="/currentElectionsMenu"><img class="img-responsive" src="Current-Election.png"  heihgt="75" width="75"></a>Current Elections</li>
+  <li class="flex-item"><a href="/currentElectionMenu"><img class="img-responsive" src="Current-Election.png"  heihgt="75" width="75"></a>Current Elections</li>
 </ul>
 <ul class="flex-container">
   <li class="flex-item"><a href="/BallotDropBoxSites"><img class="img-responsive" src="DropBox.png"  heihgt="75" width="75"></a>Ballot Drop Box Sites</li>
@@ -128,14 +128,18 @@
 <!-- HTML code for the Buttons on the Main Page -->
 
 
-<template name="currentElectionsMenu">
+<template name="currentElectionMenu">
 <!-- First Row with code for picture icon and text for three button -->
 <img src="top-section-current-election.png" class="img-responsive">
 
 <center><div id="MyEdit" class="h4">
-    This text will change
+    
 </div></center>
 
+
+
+
+<!--  Count down 
 <script>
 function TimeToVote() {
     var date = new Date("April 25, 2016");
@@ -160,8 +164,9 @@ function TimeToVote() {
 }
 
 window.onload = TimeToVote();
-
 </script>
+-->
+
 
 <ul class="flex-container">
   <li class="flex-item"><a href="/registrationDeadlines" ><img class="img-responsive" src="ElectionDates-RegDeadlines.png" heihgt="75" width="75"></a>Registration Deadlines</li>
@@ -283,7 +288,6 @@ http://www.co.thurston.wa.us/auditor/Elections/voter_reg/ballot.htm" border='0' 
                         <a href="https://twitter.com/TCAuditor"><i class="fa fa-twitter-square fa-2x fa-fw"></i></a>
                         <a href="https://www.instagram.com/thurstonauditor/"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
                         <a href="https://www.youtube.com/channel/UCxORZbqlmF1kADpJAu9EIOg"><i class="fa fa-youtube-square fa-2x fa-fw"></i></a>
-                        <a href="https://www.periscope.tv/"><i class="fa fa-map-marker fa-2x fa-fw"></i></a>
                         <br>
                         <a href="http://www.co.thurston.wa.us/auditor/elections/electns.htm">Visit Our Website</a>
         			</div>

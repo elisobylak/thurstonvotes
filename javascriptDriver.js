@@ -44,8 +44,8 @@ if (Meteor.isClient) {
     this.layout('mainNav');
   });
 
-   Router.route('/currentElectionsMenu', function() {
-    this.render('currentElectionsMenu');
+   Router.route('/currentElectionMenu', function() {
+    this.render('currentElectionMenu');
     this.layout('mainNav');
   });
 
