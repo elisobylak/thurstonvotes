@@ -1,5 +1,6 @@
-//import "./main.html"
-//import "./main.css"
+import "./client/main.html"
+import "./client/main.css"
+
 
 // if the application is being loaded on the client side, then load google maps
 if (Meteor.isClient) {
